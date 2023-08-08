@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Include File Example</title>
+</head>
+<body>
+    <h1>Include File Example</h1>
+    <p>This page demonstrates the includefile subroutine in action.</p>
+    <button onclick="loadFile('example.txt')">Include File</button>
+    <div id="fileContent"></div>
+
+    <script>
+        function loadFile(fname) {
+            // Use AJAX to call the Perl CGI script to include the file content
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById("fileContent").innerText = this.responseText;
+                }
+            };
+            xhttp.open("GET", "cgi-bin/includefile.cgi?fname=" + encodeURIComponent(fname), true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
