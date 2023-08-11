@@ -9,7 +9,7 @@ Save the includefile.cgi file in a directory accessible by your web server. Make
 	4.	Place the includefile.cgi file in the CGI directory and make sure it can be executed by the web server.
 	5.	Create an HTML file (e.g., index.html) in your web server’s root directory with the following content:
 
- 	6.	Save the index.html file in your web server’s root directory.
+6.	Save the index.html file in your web server’s root directory.
 	7.	Ensure that the Perl CGI script (includefile.cgi) and the HTML file (index.html) are in the appropriate directories, and their file permissions are set correctly.
 	8.	Start your web server and access the index.html file in your web browser. Clicking the “Include File” button will trigger the AJAX call to the includefile.cgi script, which will dynamically include and display the content of the specified file (example.txt in this case).
 
